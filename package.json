@@ -1,0 +1,47 @@
+{
+  "name": "global-variable-hover",
+  "displayName": "global variable hover",
+  "description": "Check global variable when hover ",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.100.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+       "configuration": {
+        "type":"object",
+        "title": "global-variable-hover Settings",
+        "properties": {
+          "global-variable-hover.enabled": {
+            "type": "boolean",
+            "default": true,
+            "description": "是否启用 global-variable-hover 插件"
+          },
+          "global-variable-hover.config": {
+            "type": "object",
+            "default": {},
+            "description": "你可以在此配置任意 key/value，hover 时展示"
+          }
+       }
+      }
+  },
+  "scripts": {
+    "vscode:prepublish": "pnpm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "pnpm run compile && pnpm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.100.0",
+    "@types/node": "20.x",
+    "typescript": "^5.8.3"
+  }
+}
