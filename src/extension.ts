@@ -4,6 +4,7 @@ import * as vscode from 'vscode';
 export function activate(context: vscode.ExtensionContext) {
   const config = vscode.workspace.getConfiguration('global-variable-hover');
   const enable = config.get<boolean>('enabled');
+  const API_KEY = '' ;
   if (!enable) {
     return;
   }
@@ -13,7 +14,7 @@ export function activate(context: vscode.ExtensionContext) {
 function registerHoverProvider(context : vscode.ExtensionContext) {
    context.subscriptions.push(
     vscode.languages.registerHoverProvider('*', {
-      provideHover(document, position, token) { 
+      provideHover(document, position, ) { 
         const wordRange = document.getWordRangeAtPosition(position);
         if(!wordRange) return ;
         const word = document.getText(wordRange);

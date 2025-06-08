@@ -2,7 +2,7 @@
   "name": "global-variable-hover",
   "displayName": "global variable hover",
   "description": "Check global variable when hover ",
-  "publisher": "Q-Peppa",
+  "publisher": "Peppa",
   "version": "0.0.1",
   "repository": {
     "url": "https://github.com/Q-Peppa/global-variable-hover",
@@ -25,7 +25,7 @@
       "properties": {
         "global-variable-hover.enabled": {
           "type": "boolean",
-          "default": true,
+          "default": false,
           "description": "是否启用 global-variable-hover 插件"
         },
         "global-variable-hover.config": {
